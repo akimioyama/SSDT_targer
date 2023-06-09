@@ -61,6 +61,7 @@
     <Build Include="createUserTable.sql" />
     <Build Include="createHistoryLoginTable.sql" />
     <Build Include="createRoleTable.sql" />
+    <Build Include="delOldLoginsProcedure.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SSDT_targer.refactorlog" />
