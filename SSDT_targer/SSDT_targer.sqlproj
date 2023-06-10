@@ -56,6 +56,7 @@
   <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
   <ItemGroup>
     <Folder Include="Properties" />
+    <Folder Include="Metadata" />
   </ItemGroup>
   <ItemGroup>
     <Build Include="createUserTable.sql" />
@@ -68,5 +69,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SSDT_targer.publish.xml" />
+    <None Include="test.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <PostDeploy Include="Metadata\_MetadataPost.sql" />
   </ItemGroup>
 </Project>

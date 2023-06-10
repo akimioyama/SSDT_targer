@@ -1,5 +1,9 @@
 ﻿CREATE PROCEDURE [dbo].[delOldLogins]
 AS
 BEGIN 
-	DELETE FROM dbo.HistoryLogin WHERE HistoryLogin.last_login_time <= GETUTCDATE()
+	DECLARE @target DATETIMEOFFSET
+	SET @target = DATEADD(YEAR, -5, SYSDATETIMEOFFSET())
+
+	DELETE FROM [dbo].[HistoryLogin]
+	WHERE HistoryLogin.last_login_time <= @target
 END
