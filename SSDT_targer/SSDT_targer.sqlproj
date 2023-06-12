@@ -63,13 +63,13 @@
     <Build Include="createHistoryLoginTable.sql" />
     <Build Include="createRoleTable.sql" />
     <Build Include="delOldLoginsProcedure.sql" />
+    <None Include="Metadata\test.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SSDT_targer.refactorlog" />
   </ItemGroup>
   <ItemGroup>
     <None Include="SSDT_targer.publish.xml" />
-    <None Include="test.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Metadata\_MetadataPost.sql" />
