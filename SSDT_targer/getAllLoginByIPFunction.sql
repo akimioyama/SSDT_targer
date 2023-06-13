@@ -5,7 +5,7 @@
 RETURNS @InfoByIP_address TABLE
 (
 	[login] NVARCHAR(50),
-	[Id] INT,
+	[Id_user] INT,
 	[last_login_time] DATETIMEOFFSET,
 	[device_settings] NVARCHAR(50)
 )
