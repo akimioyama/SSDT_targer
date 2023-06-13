@@ -4,15 +4,15 @@
 )
 RETURNS @InfoByIP_address TABLE
 (
-	[Id] INT,
-	[user_id] INT,
-	[last_login_time] DATETIMEOFFSET,
-	[device_settings] NVARCHAR(50)
+	[login] NVARCHAR(50),
+	[Id] INT
 )
 AS
 BEGIN
 	INSERT @InfoByIP_address
-	SELECT [Id],[user_id],[last_login_time],[device_settings] 
-	FROM [dbo].[HistoryLogin] WHERE [HistoryLogin].Id = @IP_address
+	SELECT [User].[login], [User].[Id] 
+	FROM [dbo].[HistoryLogin] JOIN [dbo].[User] 
+	ON [HistoryLogin].user_id = [User].Id
+	WHERE [HistoryLogin].IP = @IP_address
 	RETURN
 END
