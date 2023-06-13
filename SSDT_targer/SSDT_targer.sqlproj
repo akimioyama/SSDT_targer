@@ -64,6 +64,8 @@
     <Build Include="createRoleTable.sql" />
     <Build Include="delOldLoginsProcedure.sql" />
     <None Include="Metadata\test.sql" />
+    <Build Include="getAllLoginByIPFunction.sql" />
+    <Build Include="getInfoLoginByIDProcedure.sql" />
   </ItemGroup>
   <ItemGroup>
     <RefactorLog Include="SSDT_targer.refactorlog" />
